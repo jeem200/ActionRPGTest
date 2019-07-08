@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetBool("Locked", lockedOnTarget);
             }
         }
-        if (/*playerHead.transform.rotation.y > -0.60f && playerHead.transform.rotation.y < 0.55f */ true) //change this in order to make it so the lock on can be broken
+        if (playerHead.transform.rotation.y > -0.60f && playerHead.transform.rotation.y < 0.55f) //change this in order to make it so the lock on can be broken
         {
             if (lookingAt)
             {
