@@ -12,14 +12,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector3 relativePosition;
     [SerializeField] Transform cameraAnchor;
     [SerializeField] bool lockedOnTarget;
-    [SerializeField, Range(0, 10)] float speed;
+    [SerializeField] float speed;
+    [SerializeField, Range(0, 5)] float walkSpeed;
+    [SerializeField, Range(5, 10)] float runSpeed;
     [SerializeField, Range(0, 100)] float rotationSpeed;
-
+    [SerializeField, Range(0, 1)] float speedSmoothTime;
+    [SerializeField, Range(0, 1)] float turnSmoothTime;
+    private float speedSmoothVelocity;
+    private float turnSmoothVelocity;
     [SerializeField, Range(0, 1)] float jumpSpeed;
     [SerializeField, Range(0, 1)] float jump;
     [SerializeField] bool grounded;
     [SerializeField] bool walled;
-    
+    [SerializeField] bool running;
+    [SerializeField] CameraController camController;
+
     private int bufferedLoadout;
     float timeCount;
 
@@ -44,8 +51,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerAnimator.SetInteger("Loadout", loadout);
-
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -85,6 +91,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 lookingAt = null;
+                camController.target = this.transform;
                 lockedOnTarget = false;
                 playerAnimator.SetBool("Locked", lockedOnTarget);
             }
@@ -94,15 +101,36 @@ public class PlayerController : MonoBehaviour
         {
             ///*
             relativePosition = lookingAt.position - playerHead.position;
+            
             //playerNeck.rotation = Quaternion.Slerp(playerNeck.rotation, Quaternion.LookRotation(relativePosition) * Quaternion.Euler(-playerHead.localEulerAngles), Time.deltaTime * rotationSpeed);
             //Debug.Log(-playerHead.localRotation.eulerAngles);
-            cameraAnchor.rotation = Quaternion.RotateTowards(cameraAnchor.rotation, Quaternion.LookRotation(relativePosition), Time.deltaTime * rotationSpeed);
+            //cameraAnchor.rotation = Quaternion.RotateTowards(cameraAnchor.rotation, Quaternion.LookRotation(relativePosition), Time.deltaTime * rotationSpeed);
             //playerHead.transform.rotation = Quaternion.RotateTowards(playerHead.transform.rotation, Quaternion.LookRotation(relativePosition), Time.time * rotationSpeed);
             Debug.DrawRay(playerHead.transform.position, playerHead.transform.TransformDirection(Vector3.forward) * Vector3.Distance(playerHead.transform.position, lookingAt.transform.position), Color.red);
             //*/
         }
+
+        #endregion
+
+        #region "Unlocked Movement"
         else
         {
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            Vector2 inputDir = input.normalized;
+            if (inputDir != Vector2.zero)
+            {
+                float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
+                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+            }
+
+            running = Input.GetKey(KeyCode.LeftShift);
+            float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;
+            speed = Mathf.SmoothDamp(speed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
+
+            transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
+
+            float animationSpeedPercent = ((running) ? 1 : .5f) * inputDir.magnitude;
+            playerAnimator.SetFloat("Vertical", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
             playerAnimator.SetLookAtWeight(0f);
         }
         //looks at the object for as long as it doesn't look unnatural 
@@ -112,98 +140,10 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         //sets animator values in directional speed (horizontal and vertical)
-        
+
 
         #region "Animation Control"
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                vertical = Mathf.Lerp(vertical, 1f, Time.deltaTime * speed);
-                horizontal = Mathf.Lerp(horizontal, 0, Time.deltaTime * speed);
 
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                horizontal = Mathf.Lerp(horizontal, 2f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0, Time.deltaTime * speed);
-
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                vertical = Mathf.Lerp(vertical, -1f, Time.deltaTime * speed);
-                horizontal = Mathf.Lerp(horizontal, 0, Time.deltaTime * speed);
-
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                horizontal = Mathf.Lerp(horizontal, -2f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0, Time.deltaTime * speed);
-            }
-            else
-            {
-                horizontal = Mathf.Lerp(horizontal, 0f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0f, Time.deltaTime * speed);
-                jump = Mathf.Lerp(jump, 0f, Time.deltaTime * jumpSpeed);
-            }
-            //jumps if player is grounded
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (grounded)
-                {
-                    jump = 1;
-                }
-            }
-        }
-        else if (!Input.GetKey(KeyCode.LeftShift))
-        {
-            if (Input.GetKey(KeyCode.W))
-            {
-                vertical = Mathf.Lerp(vertical, .5f, Time.deltaTime * speed);
-                horizontal = Mathf.Lerp(horizontal, 0, Time.deltaTime * speed);
-
-            }
-            else if (Input.GetKey(KeyCode.A))
-            {
-                horizontal = Mathf.Lerp(horizontal, 1f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0, Time.deltaTime * speed);
-
-            }
-            else if (Input.GetKey(KeyCode.S))
-            {
-                vertical = Mathf.Lerp(vertical, -.5f, Time.deltaTime * speed);
-                horizontal = Mathf.Lerp(horizontal, 0, Time.deltaTime * speed);
-
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                horizontal = Mathf.Lerp(horizontal, -1f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0, Time.deltaTime * speed);
-
-            }
-            else
-            {
-                horizontal = Mathf.Lerp(horizontal, 0f, Time.deltaTime * speed);
-                vertical = Mathf.Lerp(vertical, 0f, Time.deltaTime * speed);
-                jump = Mathf.Lerp(jump, 0f, Time.deltaTime * jumpSpeed);
-            }
-            //jumps if player is grounded
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (grounded)
-                {
-                    jump = 1;
-                }
-            }
-            if (lockedOnTarget)
-            {
-                this.transform.position = new Vector3(this.transform.position.x + horizontal * -speed * 0.3f * Time.deltaTime, this.transform.position.y, this.transform.position.z + vertical * speed * Time.deltaTime * 0.4f);
-            }
-            else
-            {
-
-            }
-        }
 
         if (loadout != bufferedLoadout)
         {
@@ -243,15 +183,20 @@ public class PlayerController : MonoBehaviour
                 loadout = 4;
             }
         }
+        /*
         playerAnimator.SetFloat("Vertical", vertical);
         playerAnimator.SetFloat("Horizontal", horizontal);
         playerAnimator.SetFloat("Jump", jump);
+        */
+
         #endregion
 
         //camera rotation is controlled by mouse movement, adding to its rotation around the camera anchor
         #region "Mouse Camera Control"
         cameraAnchor.Rotate(Input.GetAxis("Mouse Y") / 2, Input.GetAxis("Mouse X") / 2, 0);
         #endregion
+
+
     }
     void OnAnimatorIK()
     {
@@ -290,4 +235,3 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
-
