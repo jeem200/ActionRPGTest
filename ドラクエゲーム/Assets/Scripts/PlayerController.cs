@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField, Range(0, 1)] float jump;
     [SerializeField] bool grounded;
     [SerializeField] bool walled;
+    
     private int bufferedLoadout;
     float timeCount;
 
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerAnimator.SetInteger("Loadout", loadout);
+
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -87,28 +89,21 @@ public class PlayerController : MonoBehaviour
                 playerAnimator.SetBool("Locked", lockedOnTarget);
             }
         }
-        if (playerHead.transform.rotation.y > -0.60f && playerHead.transform.rotation.y < 0.55f) //change this in order to make it so the lock on can be broken
+
+        if (lookingAt)
         {
-            if (lookingAt)
-            {
-                ///*
-                relativePosition = lookingAt.position - playerHead.position;
-                //playerNeck.rotation = Quaternion.Slerp(playerNeck.rotation, Quaternion.LookRotation(relativePosition) * Quaternion.Euler(-playerHead.localEulerAngles), Time.deltaTime * rotationSpeed);
-                //Debug.Log(-playerHead.localRotation.eulerAngles);
-                cameraAnchor.rotation = Quaternion.RotateTowards(cameraAnchor.rotation, Quaternion.LookRotation(relativePosition), Time.deltaTime * rotationSpeed);
-                //playerHead.transform.rotation = Quaternion.RotateTowards(playerHead.transform.rotation, Quaternion.LookRotation(relativePosition), Time.time * rotationSpeed);
-                Debug.DrawRay(playerHead.transform.position, playerHead.transform.TransformDirection(Vector3.forward) * Vector3.Distance(playerHead.transform.position, lookingAt.transform.position), Color.red);
-                //*/
-            }
+            ///*
+            relativePosition = lookingAt.position - playerHead.position;
+            //playerNeck.rotation = Quaternion.Slerp(playerNeck.rotation, Quaternion.LookRotation(relativePosition) * Quaternion.Euler(-playerHead.localEulerAngles), Time.deltaTime * rotationSpeed);
+            //Debug.Log(-playerHead.localRotation.eulerAngles);
+            cameraAnchor.rotation = Quaternion.RotateTowards(cameraAnchor.rotation, Quaternion.LookRotation(relativePosition), Time.deltaTime * rotationSpeed);
+            //playerHead.transform.rotation = Quaternion.RotateTowards(playerHead.transform.rotation, Quaternion.LookRotation(relativePosition), Time.time * rotationSpeed);
+            Debug.DrawRay(playerHead.transform.position, playerHead.transform.TransformDirection(Vector3.forward) * Vector3.Distance(playerHead.transform.position, lookingAt.transform.position), Color.red);
+            //*/
         }
         else
         {
-            if (lookingAt)
-            {
-                lookingAt = null;
-                lockedOnTarget = false;
-                playerAnimator.SetBool("Locked", lockedOnTarget);
-            }
+            playerAnimator.SetLookAtWeight(0f);
         }
         //looks at the object for as long as it doesn't look unnatural 
 
@@ -117,6 +112,8 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         //sets animator values in directional speed (horizontal and vertical)
+        
+
         #region "Animation Control"
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -198,6 +195,14 @@ public class PlayerController : MonoBehaviour
                     jump = 1;
                 }
             }
+            if (lockedOnTarget)
+            {
+                this.transform.position = new Vector3(this.transform.position.x + horizontal * -speed * 0.3f * Time.deltaTime, this.transform.position.y, this.transform.position.z + vertical * speed * Time.deltaTime * 0.4f);
+            }
+            else
+            {
+
+            }
         }
 
         if (loadout != bufferedLoadout)
@@ -263,9 +268,14 @@ public class PlayerController : MonoBehaviour
                 //playerHead.transform.rotation = Quaternion.RotateTowards(playerHead.transform.rotation, Quaternion.LookRotation(relativePosition), Time.time * rotationSpeed);
                 //Debug.DrawRay(playerHead.transform.position, playerHead.transform.TransformDirection(Vector3.forward) * Vector3.Distance(playerHead.transform.position, lookingAt.transform.position), Color.red);
                 //*/
-                playerAnimator.SetLookAtWeight(1f);
-                playerAnimator.SetLookAtPosition(lookingAt.position);
+                //Debug.Log(playerHead.eulerAngles);
+                if (playerHead.localEulerAngles.y < 70f || playerHead.localEulerAngles.y > 290)
+                {
 
+                    playerAnimator.SetLookAtWeight(weight: 1f, bodyWeight: 0.5f, headWeight: 1.0f, eyesWeight: 0, clampWeight: 0.9f);
+                    playerAnimator.SetLookAtPosition(lookingAt.position);
+
+                }
             }
             if (!lookingAt)
             {

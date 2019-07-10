@@ -62,118 +62,118 @@
      <None Include="Assets\Textures\Shaders\SimpleGrassShader.shader" />
      <None Include="Assets\Textures\Shaders\BreathofTheShader.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Properties">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Properties.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Jobs.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Jobs.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Jobs.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.StaticTypeRegistry">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.StaticTypeRegistry.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Collections">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Scenes.Hybrid">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Scenes.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Scenes.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Scenes.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Extensions">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Extensions.Hybrid">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Extensions.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.BuildUtils">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.BuildUtils.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities.Hybrid">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Properties">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Properties.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Entities">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Entities.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Properties.Reflection">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Properties.Reflection.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Properties.Reflection.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Transforms">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Transforms.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Transforms.Hybrid">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/ScriptAssemblies/Unity.Transforms.Hybrid.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>E:/Unity/2019.1.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -362,16 +362,16 @@
  <HintPath>E:/Unity/2019.1.2f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="System.Runtime.CompilerServices.Unsafe">
- <HintPath>E:/Pedro/ドラクエゲーム/Library/PackageCache/com.unity.collections@0.0.9-preview.20/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+ <HintPath>E:/Pedro/ActionRPGTest/ドラクエゲーム/Library/PackageCache/com.unity.collections@0.0.9-preview.20/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>E:/Unity/2019.1.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
