@@ -57,10 +57,15 @@
   <ItemGroup>
      <Compile Include="Assets\SceneManagerTeste.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Fractal\FractalMaster.cs" />
      <Compile Include="Assets\Scripts\Instancing.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Python\Tutorial.cs" />
+     <Compile Include="Assets\Scripts\SDF\Master.cs" />
+     <Compile Include="Assets\Scripts\SDF\Shape.cs" />
      <Compile Include="Assets\Scripts\Utilities\Helper.cs" />
+     <None Include="Assets\Scripts\SDF\Raymarching.compute" />
+     <None Include="Assets\Scripts\Fractal\Fractal.compute" />
      <None Include="Assets\Textures\Shaders\SimpleGrassShader.shader" />
      <None Include="Assets\Textures\Shaders\BreathofTheShader.shader" />
  <Reference Include="Unity.Timeline.Editor">

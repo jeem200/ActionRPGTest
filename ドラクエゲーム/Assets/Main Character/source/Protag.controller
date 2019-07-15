@@ -147,6 +147,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!206 &-6186722582655891583
+BlendTree:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlendTree
+  m_Childs: []
+  m_BlendParameter: Vertical
+  m_BlendParameterY: Vertical
+  m_MinThreshold: 0
+  m_MaxThreshold: 1
+  m_UseAutomaticThresholds: 1
+  m_NormalizedBlendValues: 0
+  m_BlendType: 0
 --- !u!1102 &-5746603367682650087
 AnimatorState:
   serializedVersion: 5
@@ -810,44 +825,17 @@ BlendTree:
   - serializedVersion: 2
     m_Motion: {fileID: -203655887218126122, guid: a610c15337c09e241a2082d2b3f45591,
       type: 3}
-    m_Threshold: 0.4
+    m_Threshold: 0.5
     m_Position: {x: 0.4, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 6200578666267062213, guid: 4352cb9984e58b64f8a5f819ba19457c,
+    m_Motion: {fileID: -203655887218126122, guid: 017cbb89d28b24c4c882f770547f99d5,
       type: 3}
-    m_Threshold: 0.8
+    m_Threshold: 1
     m_Position: {x: 0.9, y: 0}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Vertical
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 8e2eefd7c56b72f47a1c281cdb2c03af,
-      type: 3}
-    m_Threshold: 1.2
-    m_Position: {x: 0, y: -0.5}
-    m_TimeScale: 1
-    m_CycleOffset: 0.5
-    m_DirectBlendParameter: Vertical
-    m_Mirror: 1
-  - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: 8e2eefd7c56b72f47a1c281cdb2c03af,
-      type: 3}
-    m_Threshold: 1.6000001
-    m_Position: {x: 0, y: 0.5}
-    m_TimeScale: 1
-    m_CycleOffset: 0
-    m_DirectBlendParameter: Vertical
-    m_Mirror: 0
-  - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: a610c15337c09e241a2082d2b3f45591,
-      type: 3}
-    m_Threshold: 2.0000002
-    m_Position: {x: -0.4, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Vertical
@@ -855,10 +843,10 @@ BlendTree:
   m_BlendParameter: Vertical
   m_BlendParameterY: Horizontal
   m_MinThreshold: 0
-  m_MaxThreshold: 2.0000002
+  m_MaxThreshold: 1
   m_UseAutomaticThresholds: 0
-  m_NormalizedBlendValues: 0
-  m_BlendType: 1
+  m_NormalizedBlendValues: 1
+  m_BlendType: 0
 --- !u!1101 &3378428700715385892
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1099,7 +1087,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4512872127042509043}
-    m_Position: {x: 600, y: -110, z: 0}
+    m_Position: {x: 600, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -515014237658313654}
     m_Position: {x: 140, y: -240, z: 0}

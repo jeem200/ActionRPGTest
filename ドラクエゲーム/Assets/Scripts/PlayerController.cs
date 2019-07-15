@@ -128,9 +128,10 @@ public class PlayerController : MonoBehaviour
             speed = Mathf.SmoothDamp(speed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
 
             transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
-
-            float animationSpeedPercent = ((running) ? 1 : .5f) * inputDir.magnitude;
-            playerAnimator.SetFloat("Vertical", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+            
+            vertical = ((running) ? 1 : .5f) * inputDir.magnitude;
+            
+            playerAnimator.SetFloat("Vertical", vertical, speedSmoothTime, Time.deltaTime);
             playerAnimator.SetLookAtWeight(0f);
         }
         //looks at the object for as long as it doesn't look unnatural 
